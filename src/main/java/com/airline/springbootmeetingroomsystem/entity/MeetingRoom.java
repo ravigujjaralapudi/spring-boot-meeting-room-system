@@ -1,5 +1,7 @@
 package com.airline.springbootmeetingroomsystem.entity;
 
+import com.airline.springbootmeetingroomsystem.config.RoomType;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -15,5 +17,6 @@ public class MeetingRoom {
     private String roomName;
     private String roomLocation;
     private int roomSize;
-
+    @JsonIgnore
+    private RoomType roomType;
 }
